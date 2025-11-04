@@ -1,0 +1,31 @@
+@rootURL = http://localhost:5029
+
+###
+GET {{rootURL}}/api/books
+Accept: application/json
+
+###
+GET {{rootURL}}/api/books/2
+Accept: application/json
+
+###
+POST {{rootURL}}/api/books
+Content-Type: application/json
+{
+    "title": "The Name of the Wind",
+    "author": "Patrick Rothfuss",
+    "publishedDate": "2007-03-27"
+}
+
+###
+PUT {{rootURL}}/api/books/11
+Content-Type: application/json
+{
+    "id": 11,
+    "title": "The Martian",
+    "author": "Andy Weir",
+    "publishedDate": "2011-02-11"
+}
+
+###
+DELETE {{rootURL}}/api/books/11
